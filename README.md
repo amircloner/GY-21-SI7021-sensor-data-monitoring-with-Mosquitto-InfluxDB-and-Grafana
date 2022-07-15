@@ -50,9 +50,9 @@ Mosquitto username and passwords are `mqttuser` and `mqttpassword`.
 
 Sensor should send data to the mosquitto broker to the following topic:  
 `home/{peripheralName}/{temperature|humidity|battery|status}`.  
-For example: `home/GY-21 SI7021/temperature`.
+For example: `home/GY-21-SI7021/temperature`.
 
-Arduino sketches for the ESP8266 are provided to communicate with a GY-21 SI7021 (`GY-21 SI7021`)  
+Arduino sketches for the ESP8266 are provided to communicate with a GY-21-SI7021 (`GY-21-SI7021`)  
 Before flashing, you need to change the `WIFI_SSID`, `WIFI_PASSWORD`, and `MQTT_SERVER` constants to your WiFi information and MQTT server address.
 
 ## Grafana setup
@@ -71,7 +71,7 @@ Before flashing, you need to change the `WIFI_SSID`, `WIFI_PASSWORD`, and `MQTT_
   - Add Graph Panel
   - Edit Panel
   - Data Source: InfluxDB
-  - FROM: `[default] [temperature] WHERE [location]=[GY-21 SI7021]`
+  - FROM: `[default] [temperature] WHERE [location]=[GY-21-SI7021]`
   - SELECT: `field(value)`
   - FORMAT AS: `Time series`
   - Draw mode: Lines
