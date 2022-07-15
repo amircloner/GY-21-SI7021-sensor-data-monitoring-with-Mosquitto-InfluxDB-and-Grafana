@@ -71,14 +71,24 @@ Before flashing, you need to change the `WIFI_SSID`, `WIFI_PASSWORD`, and `MQTT_
   - Add Graph Panel
   - Edit Panel
   - Data Source: InfluxDB
-  - FROM: `[default] [temperature] WHERE [location]=[GY-21-SI7021]`
-  - SELECT: `field(value)`
-  - FORMAT AS: `Time series`
-  - Draw mode: Lines
-  - Stacking & Null value: Null value [connected]
-  - Left Y
-    - Unit: Temperature > Celcius
-  - Panel title: Temperature (°C)
+  - Temperature
+    - FROM: `[default] [temperature] WHERE [location]=[GY-21-SI7021]`
+    - SELECT: `field(value)`
+    - FORMAT AS: `Time series`
+    - Draw mode: Lines
+    - Stacking & Null value: Null value [connected]
+    - Left Y
+      - Unit: Temperature > Celcius
+    - Panel title: Temperature (°C)
+  - Humidity
+    - FROM: `[default] [humidity] WHERE [location]=[GY-21-SI7021]`
+    - SELECT: `field(value)`
+    - FORMAT AS: `Time series`
+    - Draw mode: Lines
+    - Stacking & Null value: Null value [connected]
+    - Left Y
+      - Unit: Misc > Humidity (%H)
+    - Panel title: Humidity (%H)
 
 
 ## Optional: Update mosquitto credentials
